@@ -1,0 +1,11 @@
+newversion:
+  commands:
+    - npm --no-git-tag-version version $1
+    - npm install
+  description: Update the package.json with a new version
+version:
+  command: npm view imagegallery-diff version
+  description: Show the current version of the package
+test:
+  command: bin/imagegallery-diff.js --target testFiles/images.json --base testFiles/sourceimages.json --output testFiles/output.json
+  description: Test against some test files

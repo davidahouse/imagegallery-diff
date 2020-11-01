@@ -1,0 +1,34 @@
+{
+  "name": "imagegallery-diff",
+  "main": "bin/imagegallery-diff.js",
+  "version": "0.1.0",
+  "description": "A command line app for comparing two image gallery json files and producing a diff",
+  "license": "MIT",
+  "repository": "davidahouse/imagegallery-diff",
+  "preferGlobal": true,
+  "bin": {
+    "imagegallery-diff": "bin/imagegallery-diff.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "commander": "^5.0.0",
+    "figlet": "^1.2.1",
+    "js-yaml": "^3.13.1",
+    "line-reader": "^0.4.0",
+    "pixelmatch": "^5.2.1",
+    "pkginfo": "^0.4.1",
+    "pngjs": "^6.0.0",
+    "rc": "^1.2.8",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.5.0"
+  },
+  "scripts": {
+    "lint": "eslint $(find . -name \"*.js\" -not -path \"./node_modules/*\" -not -path \"./public/*\")",
+    "lint-fix": "eslint --fix $(find . -name \"*.js\" -not -path \"./node_modules/*\" -not -path \"./public/*\")"
+  }
+}
