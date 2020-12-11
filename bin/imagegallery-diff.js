@@ -78,15 +78,6 @@ async function compareImages(target, base) {
   const img1 = PNG.sync.read(fs.readFileSync("target.png"));
   const img2 = PNG.sync.read(fs.readFileSync("base.png"));
   const { width, height } = img1;
-  const { width2, height2 } = img2;
-
-  if (width != width2 || height != height2) {
-    output.changed.push({
-      target: target,
-      base: base,
-    });
-    return;
-  }
 
   try {
     const pixelDiff = pixelmatch(img1.data, img2.data, null, width, height, {
