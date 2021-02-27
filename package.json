@@ -1,7 +1,7 @@
 {
   "name": "imagegallery-diff",
   "main": "bin/imagegallery-diff.js",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A command line app for comparing two image gallery json files and producing a diff",
   "license": "MIT",
   "repository": "davidahouse/imagegallery-diff",
