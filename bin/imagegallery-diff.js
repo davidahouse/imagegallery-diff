@@ -30,7 +30,7 @@ let toCompare = [];
 // allow us to compare them and capture any new images not in the base
 targetImages.images.forEach((image) => {
   let found = false;
-  baseImages[0].contents.images.forEach((baseImage) => {
+  baseImages.images.forEach((baseImage) => {
     if (image.title === baseImage.title) {
       found = true;
       toCompare.push({ target: image, base: baseImage });
@@ -43,7 +43,7 @@ targetImages.images.forEach((image) => {
 });
 
 // Finally do a simple pass in reverse to see if we find any that have been removed
-baseImages[0].contents.images.forEach((image) => {
+baseImages.images.forEach((image) => {
   let found = false;
   targetImages.images.forEach((targetImage) => {
     if (image.title === targetImage.title) {
